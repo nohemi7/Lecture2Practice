@@ -7,7 +7,7 @@ using namespace std;
 class Customer {
 public:
     //Constructor (parameterized)
-    Customer(string name='0', int age=0, int ID=0);
+    Customer(string name="empty", int age=0, int ID=0);
     //getters
     void print() const;
     string getName() const;
@@ -64,5 +64,11 @@ void Customer::setName(string n)
 
 int main() {
     Customer c;
+    c.print();
+
+    Customer e("Emily", 21, 342894);
+    e.print();
+    e.setAge(22);
+    cout << "Age of Emily in 2022: " << e.getAge() << endl;
     return 0;
 }
